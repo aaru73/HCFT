@@ -1,0 +1,139 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  @apply bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 min-h-screen;
+}
+
+.teddy-bear-icon {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 32px rgba(240, 147, 251, 0.3);
+}
+
+.pastel-button {
+  @apply rounded-3xl px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+}
+
+.music-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.video-button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.memories-button {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.notes-button {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.pictures-button {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.games-button {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  @apply text-gray-700;
+}
+
+.mood-button {
+  @apply rounded-2xl px-6 py-3 font-medium transition-all duration-300 transform hover:scale-105 shadow-md;
+}
+
+.happy-mood {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  @apply text-orange-800;
+}
+
+.sad-mood {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  @apply text-blue-800;
+}
+
+.misses-mood {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  @apply text-purple-800;
+}
+
+.tell-mood {
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  @apply text-blue-800;
+}
+
+.my-notes-mood {
+  background: linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%);
+  @apply text-white;
+}
+
+.floating-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 182, 193, 0.6);
+  font-size: 20px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+  50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+.heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+.heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+.heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+.heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+.heart:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+.heart:nth-child(8) { left: 80%; animation-delay: 1.5s; }
+.heart:nth-child(9) { left: 90%; animation-delay: 2.5s; }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.writing-area {
+  @apply w-full h-40 p-4 rounded-2xl border-2 border-pink-200 bg-white/80 backdrop-blur-sm resize-none focus:outline-none focus:border-pink-400 transition-all duration-300;
+  font-family: 'Nunito', sans-serif;
+}
+
+.game-card {
+  @apply glass-card rounded-3xl p-6 text-center transition-all duration-300 transform hover:scale-105 cursor-pointer;
+}
+
+.memory-card {
+  @apply glass-card rounded-2xl p-4 transition-all duration-300 transform hover:scale-105;
+}
+
+.player-controls {
+  @apply flex items-center justify-center space-x-4 mt-4;
+}
+
+.control-button {
+  @apply w-12 h-12 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:bg-white/50 cursor-pointer;
+}
